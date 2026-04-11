@@ -134,6 +134,29 @@
 
 ---
 
+### FI-FTM-0039 — FilterStore.svelte.ts
+
+- FilterStore class using Svelte 5 $state/$derived
+- Filter state: categories (Set), directions (Set), severities (Set), searchQuery, sortKey
+- Derived: filtered (applies all active filters + sort), resultCount, hasActiveFilters, activeFilterCount
+- Mutators: toggleCategory, toggleDirection, toggleSeverity, setSearch, setSort, reset
+- Sort keys: number (default), instances (desc), severity (desc), alpha
+
+---
+
+### FI-FTM-0040 — FilterStore.test.ts
+
+- Pure filter logic tests (no Svelte runtime needed)
+- No-filter baseline: 104 FMs returned, default sort by number
+- Category filter: single, multi, empty set
+- Direction filter: A-only (103), B-only (1 = FM-104), both (104)
+- Severity filter: CRITICAL-only, LOW-only, all combined
+- Search filter: partial match, FM ID match, case-insensitive, empty/whitespace, no-match
+- Sort keys: instances (FM-018 first), severity (CRITICAL first), alpha, number
+- Combined filters: fabrication+CRITICAL, Direction B+search
+
+---
+
 ### FI-FTM-0038 — failure-modes.test.ts
 
 - Data integrity tests: 104 FMs, unique IDs, sequential numbers, ID format

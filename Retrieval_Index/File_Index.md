@@ -44,3 +44,5 @@
 | FI-FTM-0036 | statistics.ts | /src/lib/data/statistics.ts | 2026-04-11 |
 | FI-FTM-0037 | index.ts (data barrel) | /src/lib/data/index.ts | 2026-04-11 |
 | FI-FTM-0038 | failure-modes.test.ts | /src/lib/data/failure-modes.test.ts | 2026-04-11 |
+| FI-FTM-0039 | FilterStore.svelte.ts | /src/lib/FilterStore.svelte.ts | 2026-04-11 |
+| FI-FTM-0040 | FilterStore.test.ts | /src/lib/FilterStore.test.ts | 2026-04-11 |

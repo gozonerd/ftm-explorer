@@ -12,7 +12,7 @@ export const patterns: CrossProjectPattern[] = [
 			'Claude consistently applies WEIRD (Western, Educated, Industrialized, Rich, Democratic) frameworks as universal defaults when analyzing non-Western contexts, producing plausible-sounding but culturally inaccurate content. The bias is so pervasive it crosses the line from epistemic error into fabrication — Claude invents "facts" about non-Western cultures rather than acknowledging uncertainty.',
 		projects: ['DATSPD', 'DSGPC'],
 		highestSeverity: 'CRITICAL',
-		involvedFMNumbers: [12, 18, 93, 101],
+		involvedFMNumbers: [18],
 		rulesProduced: 'Explicit cultural-context specification required; verification gate for any non-Western claim before finalization'
 	},
 	{
@@ -22,7 +22,7 @@ export const patterns: CrossProjectPattern[] = [
 			'Across multiple projects, Claude structured research and analysis to confirm initial hypotheses rather than exploring the full evidence space. This manifested as selective citation, asymmetric framing, and premature closure — producing outputs that appeared analytically rigorous but were systematically biased toward confirming the starting premise.',
 		projects: ['SMECO', 'DMISUR', 'ECOWP'],
 		highestSeverity: 'CRITICAL',
-		involvedFMNumbers: [9, 10, 11],
+		involvedFMNumbers: [11, 55, 85],
 		rulesProduced: 'Mandatory counter-argument section; explicit "devil\'s advocate" pass required before conclusions'
 	},
 	{
@@ -32,7 +32,7 @@ export const patterns: CrossProjectPattern[] = [
 			'Claude repeatedly claimed to have verified, audited, or enumerated items completely when significant gaps remained. This pattern was particularly dangerous in documentation and code review contexts where "verified" outputs were trusted downstream. The failure mode combines FM-007 (False Confidence) and FM-008 (Verification Failure) into a compounding error.',
 		projects: ['SDDOC', 'DMISUR', 'DMISDL', 'LRB', 'LBC'],
 		highestSeverity: 'CRITICAL',
-		involvedFMNumbers: [7, 8, 10, 89],
+		involvedFMNumbers: [7, 8, 10, 41, 90],
 		rulesProduced: 'Explicit enumeration counts required; "I have verified N items" must be followed by the list'
 	},
 	{
@@ -42,7 +42,7 @@ export const patterns: CrossProjectPattern[] = [
 			'Fabrication incidents were not evenly distributed — they clustered in domains where accuracy is highest-stakes: legal/regulatory research, cultural documentation, technical specifications, and empirical claims. This concentration suggests Claude\'s confidence calibration fails most severely precisely where the cost of error is highest.',
 		projects: ['DATSPD', 'SDDOC', 'ECOWP', 'DMISDL', 'AIVLT'],
 		highestSeverity: 'CRITICAL',
-		involvedFMNumbers: [1, 2, 3, 4, 5, 6, 18, 96],
+		involvedFMNumbers: [1, 3, 12, 30, 91],
 		rulesProduced: 'Domain-specific verification requirements; fabrication-risk flags on high-stakes claim types'
 	},
 	{
@@ -52,7 +52,7 @@ export const patterns: CrossProjectPattern[] = [
 			'A recurring pattern where Claude jumped to solution generation before adequately understanding the problem context, constraints, and requirements. This manifested as superficially plausible outputs that missed fundamental contextual constraints — requiring significant rework. The pattern was most costly in multi-stage projects where early missteps compounded.',
 		projects: ['DMISUR', 'SMECO', 'LBC'],
 		highestSeverity: 'HIGH',
-		involvedFMNumbers: [15, 34, 56, 100],
+		involvedFMNumbers: [14, 45, 66],
 		rulesProduced: 'Mandatory context confirmation step before solution generation; problem statement must be explicitly validated'
 	},
 	{
@@ -62,7 +62,7 @@ export const patterns: CrossProjectPattern[] = [
 			'Claude consistently generated more content than required — expanding task scope, adding unrequested sections, restructuring things that were not meant to be changed. This pattern reflects a systematic bias toward comprehensiveness over constraint adherence, creating over-complex deliverables that required significant trimming.',
 		projects: ['SDDOC', 'SMECO', 'DMISDL', 'ECOWP'],
 		highestSeverity: 'HIGH',
-		involvedFMNumbers: [21, 46, 51, 52, 87],
+		involvedFMNumbers: [13, 37, 62],
 		rulesProduced: 'Explicit scope boundaries required in prompts; "do not add unrequested sections" constraint'
 	},
 	{
@@ -72,7 +72,7 @@ export const patterns: CrossProjectPattern[] = [
 			'Claude asked users questions that Claude itself should have researched or inferred from available context. These "lazy asks" shifted cognitive burden to the user unnecessarily and slowed collaborative workflows. The pattern was most prevalent in early project stages where Claude could have used available documentation to answer its own questions.',
 		projects: ['DATSPD', 'SMECO'],
 		highestSeverity: 'HIGH',
-		involvedFMNumbers: [38, 77],
+		involvedFMNumbers: [9, 14],
 		rulesProduced: 'Self-sufficiency requirement: Claude must exhaust available context before asking; distinguish clarification questions from research Claude should do'
 	},
 	{
@@ -82,7 +82,7 @@ export const patterns: CrossProjectPattern[] = [
 			'Across long-running projects, prior thread context, incorrect assumptions, and stale state contaminated current task outputs. This manifested as role confusion (applying Project A rules to Project B), memory drift (forgetting earlier instructions), and parallel thread collisions. Context management failures compounded in proportion to project complexity.',
 		projects: ['SDDOC', 'LRB'],
 		highestSeverity: 'HIGH',
-		involvedFMNumbers: [35, 55, 61, 65, 79, 95],
+		involvedFMNumbers: [36, 38, 65, 70, 89],
 		rulesProduced: 'Thread context resets required for long sessions; explicit project-context confirmation at session start'
 	},
 	{

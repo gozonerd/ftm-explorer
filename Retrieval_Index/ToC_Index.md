@@ -134,6 +134,77 @@
 
 ---
 
+### FI-FTM-0019 — +page.svelte (explorer)
+
+- FilterStore instantiation; sidebar with search, sort select, direction/severity/category checkboxes, reset button
+- Active filter chips with per-chip remove buttons; clear-all control
+- Result count display; empty state with reset CTA
+- FM card list: expand/collapse accordion; ID badge, shortName, direction/severity badges, instance count, chevron
+- Expanded detail: full title, definition, meta row (category/direction/severity/instances), source breakdown, related patterns as links
+
+---
+
+### FI-FTM-0020 — +page.svelte (categories)
+
+- Summary strip: total FMs, Dir A, Dir B, category count
+- Horizontal bar chart: FM count by category (sorted descending)
+- Category cards: expand/collapse accordion; label, FM count, direction indicator, description
+- Expanded: FM list (ID, shortName, direction color) + link to Explorer
+
+---
+
+### FI-FTM-0021 — +page.svelte (patterns)
+
+- 9 pattern cards: P1–P9 with severity badge, full name, description
+- Projects affected chips; involved FM number links (with shortName tooltip)
+- Rules/remediations produced section per pattern
+- Cross-link to About page
+
+---
+
+### FI-FTM-0022 — +page.svelte (statistics)
+
+- Top-level stats strip: 104 FMs, 247+ incidents, 129 structured, 13 CRITICAL
+- Direction split: horizontal proportional bar (Dir A teal / Dir B purple)
+- Severity distribution bar chart (CRITICAL/HIGH/MEDIUM/LOW with color coding)
+- Evidence density chart: singletons / 2 instances / 3+ instances
+- Category distribution bar chart
+- Top 10 most evidenced FMs ranked bar chart
+- Key findings cards: fabrication/CRITICAL correlation, Dir B prevalence, singleton abundance
+
+---
+
+### FI-FTM-0023 — +page.svelte (about)
+
+- What This Is: taxonomy description, incident scope, version history
+- Research attribution: Stahl Systems, Krystal Martinez
+- Methodology: incident collection, taxonomy construction, instance counting, severity assignment, cross-project pattern analysis
+- Source documents list
+- Portfolio cross-links: governance.krystalmartinez.com
+
+---
+
+### FI-FTM-0024 — +page.svelte (privacy)
+
+- Overview: static site, no data collection
+- Data collection: no cookies, no analytics, no forms, no third-party services
+- Hosting: Vercel infrastructure note with link to Vercel privacy policy
+- Contact
+
+---
+
+### FI-FTM-0025 — +page.svelte (terms)
+
+- Acceptance clause
+- Content & IP: attribution requirements, reproduction restrictions
+- Research use disclaimer
+- No warranty
+- Limitation of liability
+- Changes notice
+- Contact
+
+---
+
 ### FI-FTM-0039 — FilterStore.svelte.ts
 
 - FilterStore class using Svelte 5 $state/$derived

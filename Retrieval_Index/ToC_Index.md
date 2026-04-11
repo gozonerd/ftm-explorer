@@ -76,3 +76,72 @@
 - Navigation cards: Explorer, Categories, Patterns, Statistics
 
 ---
+
+### FI-FTM-0032 — types.ts
+
+- Severity, Direction, CategoryId type aliases
+- FailureMode interface (id, number, shortName, title, definition, category, direction, highestSeverity, instanceCount, instanceCountWeighted, sources, relatedPatternIds)
+- CategoryMeta interface
+- CrossProjectPattern interface (id, name, description, projects, highestSeverity, involvedFMNumbers, rulesProduced)
+- TaxonomyStats interface
+
+---
+
+### FI-FTM-0033 — failure-modes.ts
+
+- All 104 FailureMode objects (FM-001 through FM-104)
+- Organized by category: Fabrication, Epistemological, Quality, Process, Communication, Scope, Bias, Identity, Judgment
+- FM-104 as sole Direction B failure mode
+- FM-018 as highest-evidence FM (12 instances)
+- relatedPatternIds linking FMs to P1–P9 cross-project patterns
+
+---
+
+### FI-FTM-0034 — categories.ts
+
+- categoryMeta record: 9 category definitions (label, description, direction)
+- categories array with computed fmCount per category
+- getCategoryLabel() helper function
+
+---
+
+### FI-FTM-0035 — patterns.ts
+
+- 9 CrossProjectPattern objects (P1–P9)
+- P1: Western Epistemic Bias as Fabrication
+- P2: Confirmatory Bias Substituted for Exploratory Analysis
+- P3: False Confidence in Verification/Enumeration
+- P4: Fabrication Concentrated in High-Stakes Domains
+- P5: Solution-Before-Context
+- P6: Scope Creep / Over-Generation
+- P7: "Lazy Questions" — Asking Instead of Doing
+- P8: Thread Contamination / Context Loss
+- P9: Human Planning Gaps (Direction B)
+
+---
+
+### FI-FTM-0036 — statistics.ts
+
+- computeStats() function: derives TaxonomyStats from failureModes array
+- severityRank() and bySeverityDesc() sort helpers
+- Pre-computed stats singleton export
+
+---
+
+### FI-FTM-0037 — index.ts (data barrel)
+
+- Re-exports: failureModes, categories, categoryMeta, getCategoryLabel, patterns, stats, computeStats, severityRank, bySeverityDesc
+
+---
+
+### FI-FTM-0038 — failure-modes.test.ts
+
+- Data integrity tests: 104 FMs, unique IDs, sequential numbers, ID format
+- Category/direction/severity validity checks
+- FM-018 instance count (12), FM-104 Direction B assertion
+- Pattern ID validity, involvedFMNumbers cross-reference
+- Category count: 9 categories, fmCount sums to 104
+- Pattern integrity: 9 patterns P1–P9
+- Statistics integrity: totalFMs=104, criticalIncidents=13, mostEvidencedFM=FM-018
+
+---

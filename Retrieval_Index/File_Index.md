@@ -37,3 +37,10 @@
 | FI-FTM-0029 | favicon.svg | /static/favicon.svg | 2026-04-11 |
 | FI-FTM-0030 | favicon.ico | /static/favicon.ico | 2026-04-11 |
 | FI-FTM-0031 | apple-touch-icon.svg | /static/apple-touch-icon.svg | 2026-04-11 |
+| FI-FTM-0032 | types.ts | /src/lib/types.ts | 2026-04-11 |
+| FI-FTM-0033 | failure-modes.ts | /src/lib/data/failure-modes.ts | 2026-04-11 |
+| FI-FTM-0034 | categories.ts | /src/lib/data/categories.ts | 2026-04-11 |
+| FI-FTM-0035 | patterns.ts | /src/lib/data/patterns.ts | 2026-04-11 |
+| FI-FTM-0036 | statistics.ts | /src/lib/data/statistics.ts | 2026-04-11 |
+| FI-FTM-0037 | index.ts (data barrel) | /src/lib/data/index.ts | 2026-04-11 |
+| FI-FTM-0038 | failure-modes.test.ts | /src/lib/data/failure-modes.test.ts | 2026-04-11 |

@@ -110,7 +110,7 @@
 			<ul class="list-disc list-inside space-y-1 text-[var(--color-text-secondary)]">
 				<li>Master AI Failure Mode Taxonomy v02 (2026-04-11)</li>
 				<li>ECT v2 Failure Mode Taxonomy — Evaluation Corpus Tier 2 (2026-04-06)</li>
-				<li>FTM v02 Instance Counts (2026-04-11)</li>
+				<li>FMT v02 Instance Counts (2026-04-11)</li>
 			</ul>
 			<p class="mt-2 text-[var(--color-text-muted)]">
 				Source documents are internal research artifacts. A preprint summary is forthcoming.

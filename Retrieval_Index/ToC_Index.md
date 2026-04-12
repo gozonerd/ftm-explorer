@@ -1,12 +1,12 @@
-# FTM Explorer — Table of Contents Index
+# FMT Explorer — Table of Contents Index
 
 **Repo:** ftm-explorer
-**Prefix:** FTM
+**Prefix:** FMT
 **Note:** Config files (package.json, tsconfig.json, etc.) omitted from ToC — their content is self-explanatory.
 
 ---
 
-### FI-FTM-0001 — D2R_Stage00_Research_Summary_2026-04-11_v01_I.md
+### FI-FMT-0001 — D2R_Stage00_Research_Summary_2026-04-11_v01_I.md
 
 - Svelte 5 runes patterns ($state/$derived/$effect, $state class pattern)
 - Tailwind 4 @theme config, token strategy, design system tokens
@@ -15,13 +15,13 @@
 - SvelteKit routing structure and Svelte 5 page/layout conventions
 - Data source shape: 104 FMs, categories, severity per-incident not per-FM
 - Scaffold configuration (tsconfig, eslint, vitest, svelte.config)
-- Retrieval Index prefix FTM proposed
+- Retrieval Index prefix FMT proposed
 - Statistics strip values with sources traced to raw data
 - Key architectural decisions summary table
 
 ---
 
-### FI-FTM-0002 — CLAUDE.md
+### FI-FMT-0002 — CLAUDE.md
 
 - Stack overview (SvelteKit 2, Svelte 5, Tailwind 4, Vitest, adapter-vercel)
 - Source data file locations
@@ -32,7 +32,7 @@
 
 ---
 
-### FI-FTM-0011 — app.html
+### FI-FMT-0011 — app.html
 
 - HTML shell with Inter font, SvelteKit preload attribute
 - Full meta tags (description, canonical)
@@ -42,7 +42,7 @@
 
 ---
 
-### FI-FTM-0012 — app.css
+### FI-FMT-0012 — app.css
 
 - Tailwind 4 @import
 - @theme block: primary, accent, severity (critical/high/medium/low), direction (A/B), bg, border, text, semantic, focus tokens
@@ -53,7 +53,7 @@
 
 ---
 
-### FI-FTM-0017 — +layout.svelte
+### FI-FMT-0017 — +layout.svelte
 
 - Skip-to-content link (sr-only, visible on focus)
 - Sticky header with navigation (desktop + mobile scrollable)
@@ -65,7 +65,7 @@
 
 ---
 
-### FI-FTM-0018 — +page.svelte (landing)
+### FI-FMT-0018 — +page.svelte (landing)
 
 - "Original Research" badge
 - Hero headline: "104 Failure Modes. 247 Incidents. 19 Project Spaces."
@@ -77,7 +77,7 @@
 
 ---
 
-### FI-FTM-0032 — types.ts
+### FI-FMT-0032 — types.ts
 
 - Severity, Direction, CategoryId type aliases
 - FailureMode interface (id, number, shortName, title, definition, category, direction, highestSeverity, instanceCount, instanceCountWeighted, sources, relatedPatternIds)
@@ -87,7 +87,7 @@
 
 ---
 
-### FI-FTM-0033 — failure-modes.ts
+### FI-FMT-0033 — failure-modes.ts
 
 - All 104 FailureMode objects (FM-001 through FM-104)
 - Organized by category: Fabrication, Epistemological, Quality, Process, Communication, Scope, Bias, Identity, Judgment
@@ -97,7 +97,7 @@
 
 ---
 
-### FI-FTM-0034 — categories.ts
+### FI-FMT-0034 — categories.ts
 
 - categoryMeta record: 9 category definitions (label, description, direction)
 - categories array with computed fmCount per category
@@ -105,7 +105,7 @@
 
 ---
 
-### FI-FTM-0035 — patterns.ts
+### FI-FMT-0035 — patterns.ts
 
 - 9 CrossProjectPattern objects (P1–P9)
 - P1: Western Epistemic Bias as Fabrication
@@ -120,7 +120,7 @@
 
 ---
 
-### FI-FTM-0036 — statistics.ts
+### FI-FMT-0036 — statistics.ts
 
 - computeStats() function: derives TaxonomyStats from failureModes array
 - severityRank() and bySeverityDesc() sort helpers
@@ -128,13 +128,13 @@
 
 ---
 
-### FI-FTM-0037 — index.ts (data barrel)
+### FI-FMT-0037 — index.ts (data barrel)
 
 - Re-exports: failureModes, categories, categoryMeta, getCategoryLabel, patterns, stats, computeStats, severityRank, bySeverityDesc
 
 ---
 
-### FI-FTM-0019 — +page.svelte (explorer)
+### FI-FMT-0019 — +page.svelte (explorer)
 
 - FilterStore instantiation; sidebar with search, sort select, direction/severity/category checkboxes, reset button
 - Active filter chips with per-chip remove buttons; clear-all control
@@ -144,7 +144,7 @@
 
 ---
 
-### FI-FTM-0020 — +page.svelte (categories)
+### FI-FMT-0020 — +page.svelte (categories)
 
 - Summary strip: total FMs, Dir A, Dir B, category count
 - Horizontal bar chart: FM count by category (sorted descending)
@@ -153,7 +153,7 @@
 
 ---
 
-### FI-FTM-0021 — +page.svelte (patterns)
+### FI-FMT-0021 — +page.svelte (patterns)
 
 - 9 pattern cards: P1–P9 with severity badge, full name, description
 - Projects affected chips; involved FM number links (with shortName tooltip)
@@ -162,7 +162,7 @@
 
 ---
 
-### FI-FTM-0022 — +page.svelte (statistics)
+### FI-FMT-0022 — +page.svelte (statistics)
 
 - Top-level stats strip: 104 FMs, 247+ incidents, 129 structured, 13 CRITICAL
 - Direction split: horizontal proportional bar (Dir A teal / Dir B purple)
@@ -174,7 +174,7 @@
 
 ---
 
-### FI-FTM-0023 — +page.svelte (about)
+### FI-FMT-0023 — +page.svelte (about)
 
 - What This Is: taxonomy description, incident scope, version history
 - Research attribution: Stahl Systems, Krystal Martinez
@@ -184,7 +184,7 @@
 
 ---
 
-### FI-FTM-0024 — +page.svelte (privacy)
+### FI-FMT-0024 — +page.svelte (privacy)
 
 - Overview: static site, no data collection
 - Data collection: no cookies, no analytics, no forms, no third-party services
@@ -193,7 +193,7 @@
 
 ---
 
-### FI-FTM-0025 — +page.svelte (terms)
+### FI-FMT-0025 — +page.svelte (terms)
 
 - Acceptance clause
 - Content & IP: attribution requirements, reproduction restrictions
@@ -205,7 +205,7 @@
 
 ---
 
-### FI-FTM-0039 — FilterStore.svelte.ts
+### FI-FMT-0039 — FilterStore.svelte.ts
 
 - FilterStore class using Svelte 5 $state/$derived
 - Filter state: categories (Set), directions (Set), severities (Set), searchQuery, sortKey
@@ -215,7 +215,7 @@
 
 ---
 
-### FI-FTM-0040 — FilterStore.test.ts
+### FI-FMT-0040 — FilterStore.test.ts
 
 - Pure filter logic tests (no Svelte runtime needed)
 - No-filter baseline: 104 FMs returned, default sort by number
@@ -228,7 +228,7 @@
 
 ---
 
-### FI-FTM-0038 — failure-modes.test.ts
+### FI-FMT-0038 — failure-modes.test.ts
 
 - Data integrity tests: 104 FMs, unique IDs, sequential numbers, ID format
 - Category/direction/severity validity checks

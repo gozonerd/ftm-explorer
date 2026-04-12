@@ -5,7 +5,7 @@ import type { FailureMode } from '../types.js';
  *
  * Source data:
  * - Short names, categories, directions, instance counts:
- *   FTM_v02_Instance_Counts_2026-04-11_v01_I.md
+ *   FMT_v02_Instance_Counts_2026-04-11_v01_I.md
  * - Titles and definitions:
  *   Master_AI_Failure_Mode_Taxonomy_2026-04-11_v02_I.md
  * - Severity (highest per FM across all documented incidents):

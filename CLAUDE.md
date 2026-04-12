@@ -1,10 +1,10 @@
-# FTM Explorer
+# FMT Explorer
 
 **Owner:** Krystal Martinez / Stahl Systems
 **Type:** SvelteKit web app — standalone portfolio tool
 **Purpose:** Interactive browser for the Bidirectional AI Failure Mode Taxonomy (104 FMs, 247+ incidents)
 **URL:** failuremodes.krystalmartinez.com
-**Retrieval Index Prefix:** FTM
+**Retrieval Index Prefix:** FMT
 
 ## Stack
 
@@ -23,7 +23,7 @@
 
 All taxonomy data is compiled from:
 - `stahl-systems-docs/12_AI_Operations_AIO/Master_AI_Failure_Mode_Taxonomy_2026-04-11_v02_I.md`
-- `stahl-systems-docs/12_AI_Operations_AIO/FTM_v02_Instance_Counts_2026-04-11_v01_I.md`
+- `stahl-systems-docs/12_AI_Operations_AIO/FMT_v02_Instance_Counts_2026-04-11_v01_I.md`
 - `stahl-systems-docs/12_AI_Operations_AIO/ECT_Comprehensive_v2/ECT_v2_Failure_Mode_Taxonomy_2026-04-06_v02_I.md`
 
 ## Directory Structure
@@ -49,7 +49,7 @@ src/
     about/          ← Methodology (Stage 09)
     privacy/        ← Privacy policy (Stage 10)
     terms/          ← Terms of use (Stage 10)
-Retrieval_Index/    ← FI-FTM-#### index files
+Retrieval_Index/    ← FI-FMT-#### index files
 static/             ← Favicon, OG image
 ```
 
@@ -70,5 +70,5 @@ static/             ← Favicon, OG image
 
 ## Retrieval Index
 
-Prefix: `FTM` — IDs: `FI-FTM-0001`, `FI-FTM-0002`, etc.
+Prefix: `FMT` — IDs: `FI-FMT-0001`, `FI-FMT-0002`, etc.
 Index files: `Retrieval_Index/File_Index.md` and `Retrieval_Index/ToC_Index.md`

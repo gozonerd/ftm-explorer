@@ -60,9 +60,9 @@
 			<a
 				href="/"
 				class="text-base font-bold text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] rounded shrink-0"
-				aria-label="FTM Explorer home"
+				aria-label="FMT Explorer home"
 			>
-				FTM Explorer
+				FMT Explorer
 			</a>
 
 			<!-- Nav links — desktop -->

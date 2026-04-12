@@ -1,4 +1,4 @@
-# D2R Stage 00 Research Summary — FTM Explorer
+# D2R Stage 00 Research Summary — FMT Explorer
 
 **Project:** Failure Mode Taxonomy Explorer (failuremodes.krystalmartinez.com)
 **Date:** 2026-04-11
@@ -82,12 +82,12 @@ export const filters = new FilterStore();
 --color-text-primary: #f1f5f9
 --color-text-secondary: #94a3b8
 --color-text-muted: #64748b
-/* Severity colors (new for FTM): */
+/* Severity colors (new for FMT): */
 --color-severity-critical: #ef4444
 --color-severity-high: #f97316
 --color-severity-medium: #eab308
 --color-severity-low: #22c55e
-/* Direction colors (new for FTM): */
+/* Direction colors (new for FMT): */
 --color-dir-a: #3b82f6           /* blue for AI errors */
 --color-dir-b: #a855f7           /* purple for human errors */
 ```
@@ -211,7 +211,7 @@ const isActive = (href: string) => page.url.pathname === href;
 aria-current={isActive('/explorer') ? 'page' : undefined}
 ```
 
-**Data loading:** Since FTM data is static (compiled TypeScript), import data files directly in `+page.svelte` or `+page.ts`. No `+page.server.ts` needed. All 104 FM definitions, categories, and patterns are TypeScript constants bundled at build time.
+**Data loading:** Since FMT data is static (compiled TypeScript), import data files directly in `+page.svelte` or `+page.ts`. No `+page.server.ts` needed. All 104 FM definitions, categories, and patterns are TypeScript constants bundled at build time.
 
 **Prerendering with adapter-vercel:** Vercel adapter supports prerendering. Add `export const prerender = true` to root `+layout.ts` to prerender all static routes. Dynamic routes not needed (all data is static).
 
@@ -398,7 +398,7 @@ export default config;
 }
 ```
 
-**Note:** `jspdf` (used in governance-assessment for PDF export) is NOT needed for FTM Explorer — no PDF export feature. Do not include.
+**Note:** `jspdf` (used in governance-assessment for PDF export) is NOT needed for FMT Explorer — no PDF export feature. Do not include.
 
 **`vitest.config.ts` (match governance-assessment exactly):**
 ```typescript
@@ -441,7 +441,7 @@ export default defineConfig({
 **Best practice:**
 Per the `retrieval-index-maintenance` rule, every repo needs a `Retrieval_Index/` folder with `File_Index.md` and `ToC_Index.md`. Unique IDs use format `FI-{REPO_PREFIX}-{####}`.
 
-**Proposed prefix for ftm-explorer:** `FTM` (not listed in existing prefixes — this is a standalone portfolio tool, not a submodule). Full ID format: `FI-FTM-0001`, `FI-FTM-0002`, etc.
+**Proposed prefix for ftm-explorer:** `FMT` (not listed in existing prefixes — this is a standalone portfolio tool, not a submodule). Full ID format: `FI-FMT-0001`, `FI-FMT-0002`, etc.
 
 **Action in Stage 01:** Create `Retrieval_Index/File_Index.md` and `Retrieval_Index/ToC_Index.md` immediately after project creation, and update with every new file throughout the build.
 

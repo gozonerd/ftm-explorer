@@ -17,7 +17,7 @@ repo:
   type: "application"
 
   # One-sentence purpose statement. Claude reads this to orient.
-  purpose: "TODO — fill in purpose"
+  purpose: "Interactive explorer for the AI failure-mode taxonomy (104 named failure modes); SvelteKit, deployed at ftm-explorer-rho.vercel.app."
 
   # GitHub org or owner: Martinez-Methods | nerdykrystal
   org: "nerdykrystal"
